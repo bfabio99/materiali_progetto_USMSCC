@@ -118,7 +118,7 @@ server = function(input, output)
    
    output$periodo_loa = renderPlot(
      {
-       colori_arc <- rainbow(length(cimo)/f+ceiling((25*12/f)))
+       colori_arc <- rainbow(length(loa)/f+ceiling((25*12/f)))
        colori_arc_loa <- colori_arc[floor((25*12/f)):length(colori_arc)]
        loa_num_NA <- c(loa_num, rep(NA, f-(length(loa_num)%%f)))
        M <- matrix(loa_num_NA, nrow=f)
